@@ -1,0 +1,16 @@
+[
+  {
+    "intent": "cancel_order",
+    "action": "reply",
+    "reply": "פתחנו בקשת ביטול להזמנה ORD-1001 (מספר בקשה SR-22C709B0). שימו לב: פתיחת הבקשה אינה אישור שההזמנה בוטלה. נעדכן אתכם לאחר שהבקשה תטופל.",
+    "order_id": "ORD-1001",
+    "source_ids": [
+      "POL-04"
+    ],
+    "service_request": {
+      "type": "cancellation",
+      "request_id": "SR-22C709B0"
+    },
+    "reason": "ORD-1001 [processing, ETA 2026-09-25, today 2026-09-22]: Processing; cancellation request opened (not a confirmed cancellation)."
+  }
+]

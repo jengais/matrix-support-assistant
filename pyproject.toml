@@ -1,0 +1,34 @@
+[project]
+name = "support-assistant"
+version = "0.1.0"
+description = "AI customer-service assistant prototype for an e-commerce site"
+readme = "README.md"
+authors = [
+    { name = "jengais", email = "jengaisin@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.142.2",
+    "langchain-openai>=1.6.7",
+    "langgraph>=1.2.12",
+    "pydantic>=2.13",
+    "python-dotenv>=1.2.4",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+support-assistant = "support_assistant:main"
+
+[build-system]
+requires = ["uv_build>=0.12.0,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "pytest-asyncio>=1.4.0",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]

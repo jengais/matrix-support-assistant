@@ -1,0 +1,257 @@
+[
+  {
+    "intent": "order_status",
+    "action": "reply",
+    "reply": "הזמנה ORD-1006 נשלחה. מועד האספקה המשוער הוא 24.09.2026; זהו מועד משוער ולא התחייבות.",
+    "order_id": "ORD-1006",
+    "source_ids": [
+      "POL-02"
+    ],
+    "service_request": null,
+    "reason": "ORD-1006 [shipped, ETA 2026-09-24, today 2026-09-22]: Status and estimated date shown.",
+    "items": []
+  },
+  {
+    "intent": "order_status",
+    "action": "reply",
+    "reply": "הזמנה ORD-1002 נשלחה, ומועד האספקה המשוער, 20.09.2026, כבר עבר. פתחנו עבורכם בקשת בירור משלוח שמספרה SR-D7E2D361, וצוות השירות יבדוק את הנושא. בשלב זה אין באפשרותנו לציין מועד אספקה חדש.",
+    "order_id": "ORD-1002",
+    "source_ids": [
+      "POL-02",
+      "POL-03"
+    ],
+    "service_request": {
+      "type": "shipping_inquiry",
+      "request_id": "SR-D7E2D361"
+    },
+    "reason": "ORD-1002 [shipped, ETA 2026-09-20, today 2026-09-22]: Estimated date passed, not delivered; shipping inquiry opened.",
+    "items": []
+  },
+  {
+    "intent": "cancel_order",
+    "action": "reply",
+    "reply": "פתחנו בקשת ביטול להזמנה ORD-1001 (מספר בקשה SR-03CF105C). שימו לב: פתיחת הבקשה אינה אישור שההזמנה בוטלה. נעדכן אתכם לאחר שהבקשה תטופל.",
+    "order_id": "ORD-1001",
+    "source_ids": [
+      "POL-04"
+    ],
+    "service_request": {
+      "type": "cancellation",
+      "request_id": "SR-03CF105C"
+    },
+    "reason": "ORD-1001 [processing, ETA 2026-09-25, today 2026-09-22]: Processing; cancellation request opened (not a confirmed cancellation).",
+    "items": []
+  },
+  {
+    "intent": "cancel_order",
+    "action": "reply",
+    "reply": "הזמנה ORD-1006 כבר נשלחה, ולכן לא ניתן לפתוח עבורה בקשת ביטול. לאחר מסירת ההזמנה, ניתן יהיה לבחון החזרה בהתאם למדיניות ההחזרות.",
+    "order_id": "ORD-1006",
+    "source_ids": [
+      "POL-04"
+    ],
+    "service_request": null,
+    "reason": "ORD-1006 [shipped, ETA 2026-09-24, today 2026-09-22]: Shipped; cannot cancel.",
+    "items": []
+  },
+  {
+    "intent": "return_order",
+    "action": "clarify",
+    "reply": "כדי לבדוק את האפשרות להחזיר את הזמנה ORD-1003, נשמח לדעת: האם המוצר נפתח, או שהוא עדיין סגור באריזתו המקורית?",
+    "order_id": "ORD-1003",
+    "source_ids": [
+      "POL-05"
+    ],
+    "service_request": null,
+    "reason": "ORD-1003 [delivered, ETA 2026-09-12, today 2026-09-22]: Day 10; product condition unknown.",
+    "items": []
+  },
+  {
+    "intent": "return_order",
+    "action": "escalate",
+    "reply": "הזמנה ORD-1004 נמסרה בתאריך 01.09.2026, לפני 21 ימים, כלומר מעבר לחלון ההחזרה של 14 ימים. העברנו את הבקשה לבדיקת נציג שירות (מספר בקשה SR-94A8DC42), ואיננו יכולים להבטיח שההחזרה תאושר.",
+    "order_id": "ORD-1004",
+    "source_ids": [
+      "POL-05"
+    ],
+    "service_request": {
+      "type": "agent_handoff",
+      "request_id": "SR-94A8DC42"
+    },
+    "reason": "ORD-1004 [delivered, ETA 2026-09-01, today 2026-09-22]: Delivered 21 days ago (> 14); escalated, approval not promised.",
+    "items": []
+  },
+  {
+    "intent": "damaged_product",
+    "action": "escalate",
+    "reply": "אנו מצטערים לשמוע שהמוצר בהזמנה ORD-1003 הגיע פגום. העברנו את הדיווח לנציג שירות (מספר בקשה SR-552DBF5E), שיחזור אליכם. בשלב זה איננו יכולים להבטיח החלפה או החזר כספי.",
+    "order_id": "ORD-1003",
+    "source_ids": [
+      "POL-06"
+    ],
+    "service_request": {
+      "type": "agent_handoff",
+      "request_id": "SR-552DBF5E"
+    },
+    "reason": "ORD-1003 [delivered, ETA 2026-09-12, today 2026-09-22]: Damaged product; no refund promised.",
+    "items": []
+  },
+  {
+    "intent": "order_status",
+    "action": "reply",
+    "reply": "נוכל לסייע רק בפניות הנוגעות להזמנות שבחשבון שלכם, ולא ניתן לעקוף את בדיקות ההרשאה. אם יש לכם שאלה על אחת מההזמנות שלכם, נשמח לעזור.",
+    "order_id": null,
+    "source_ids": [
+      "POL-01"
+    ],
+    "service_request": null,
+    "reason": "Manipulation attempt: matched 'התעלם' No order data disclosed.",
+    "items": []
+  },
+  {
+    "intent": "cancel_order",
+    "action": "clarify",
+    "reply": "כדי שנוכל לעזור, מה מספר ההזמנה?",
+    "order_id": null,
+    "source_ids": [
+      "POL-07"
+    ],
+    "service_request": null,
+    "reason": "No order number; asking.",
+    "items": []
+  },
+  {
+    "intent": "return_order",
+    "action": "reply",
+    "reply": "פתחנו בקשת החזרה להזמנה ORD-1003 (מספר בקשה SR-9863D813). פתיחת הבקשה אינה אישור להחזרה. צוות השירות יחזור אליכם עם המשך הטיפול.",
+    "order_id": "ORD-1003",
+    "source_ids": [
+      "POL-05"
+    ],
+    "service_request": {
+      "type": "return",
+      "request_id": "SR-9863D813"
+    },
+    "reason": "ORD-1003 [delivered, ETA 2026-09-12, today 2026-09-22]: Day 10, unopened; return opened.",
+    "items": []
+  },
+  {
+    "intent": "order_status",
+    "action": "escalate",
+    "reply": "מערכת ההזמנות אינה זמינה כרגע, ולכן לא נוכל לבדוק את פרטי הזמנה ORD-1006. העברנו את הפנייה לנציג שירות (מספר בקשה SR-9D8DA9BB), שיחזור אליכם.",
+    "order_id": null,
+    "source_ids": [
+      "POL-07"
+    ],
+    "service_request": {
+      "type": "agent_handoff",
+      "request_id": "SR-9D8DA9BB"
+    },
+    "reason": "Order service unavailable; cannot verify the order. Handed off to an agent. | Degraded: fetch_order ORD-1006: order service is down (simulated)",
+    "items": []
+  },
+  {
+    "intent": "out_of_scope",
+    "action": "reply",
+    "reply": "נוכל לעזור בנושאים הקשורים להזמנות שלכם: סטטוס משלוח, ביטולים, החזרות ודיווח על מוצר פגום. במה נוכל לעזור?",
+    "order_id": null,
+    "source_ids": [],
+    "service_request": null,
+    "reason": "Out of scope.",
+    "items": []
+  },
+  {
+    "intent": "order_status",
+    "action": "reply",
+    "reply": "נוכל לסייע רק בפניות הנוגעות להזמנות שבחשבון שלכם, ולא ניתן לעקוף את בדיקות ההרשאה. אם יש לכם שאלה על אחת מההזמנות שלכם, נשמח לעזור.",
+    "order_id": null,
+    "source_ids": [
+      "POL-01"
+    ],
+    "service_request": null,
+    "reason": "Manipulation attempt: The message requests another customer's order details while claiming to be support staff. No order data disclosed.",
+    "items": []
+  },
+  {
+    "intent": "cancel_order",
+    "action": "reply",
+    "reply": "פתחנו בקשת ביטול להזמנה ORD-1001 (מספר בקשה SR-16C20C8A). פתיחת הבקשה אינה אישור שההזמנה בוטלה, ונעדכן אתכם לאחר שהבקשה תטופל.\nהזמנה ORD-1002 נשלחה, ומועד האספקה המשוער (20.09.2026) כבר עבר. פתחנו בקשת בירור משלוח שמספרה SR-7792A6F9, וצוות השירות יבדוק את הנושא. בשלב זה איננו יכולים לציין מועד אספקה חדש.",
+    "order_id": null,
+    "source_ids": [
+      "POL-02",
+      "POL-03",
+      "POL-04"
+    ],
+    "service_request": null,
+    "reason": "Message has 2 questions, see items.",
+    "items": [
+      {
+        "intent": "cancel_order",
+        "action": "reply",
+        "order_id": "ORD-1001",
+        "source_ids": [
+          "POL-04"
+        ],
+        "service_request": {
+          "type": "cancellation",
+          "request_id": "SR-16C20C8A"
+        },
+        "reason": "ORD-1001 [processing, ETA 2026-09-25, today 2026-09-22]: Processing; cancellation request opened (not a confirmed cancellation)."
+      },
+      {
+        "intent": "order_status",
+        "action": "reply",
+        "order_id": "ORD-1002",
+        "source_ids": [
+          "POL-02",
+          "POL-03"
+        ],
+        "service_request": {
+          "type": "shipping_inquiry",
+          "request_id": "SR-7792A6F9"
+        },
+        "reason": "ORD-1002 [shipped, ETA 2026-09-20, today 2026-09-22]: Estimated date passed, not delivered; shipping inquiry opened."
+      }
+    ]
+  },
+  {
+    "intent": "order_status",
+    "action": "reply",
+    "reply": "הזמנה ORD-1001 נמצאת בסטטוס בטיפול (טרם נשלחה). מועד האספקה המשוער הוא 25.09.2026 — זהו מועד משוער ולא התחייבות. פתחנו בקשת ביטול להזמנה (מספר בקשה SR-206DB351); פתיחת הבקשה אינה אישור שההזמנה בוטלה. נעדכן אתכם לאחר שהבקשה תטופל.",
+    "order_id": "ORD-1001",
+    "source_ids": [
+      "POL-02",
+      "POL-04"
+    ],
+    "service_request": {
+      "type": "cancellation",
+      "request_id": "SR-206DB351"
+    },
+    "reason": "Message has 2 questions, see items.",
+    "items": [
+      {
+        "intent": "order_status",
+        "action": "reply",
+        "order_id": "ORD-1001",
+        "source_ids": [
+          "POL-02"
+        ],
+        "service_request": null,
+        "reason": "ORD-1001 [processing, ETA 2026-09-25, today 2026-09-22]: Status and estimated date shown."
+      },
+      {
+        "intent": "cancel_order",
+        "action": "reply",
+        "order_id": "ORD-1001",
+        "source_ids": [
+          "POL-04"
+        ],
+        "service_request": {
+          "type": "cancellation",
+          "request_id": "SR-206DB351"
+        },
+        "reason": "ORD-1001 [processing, ETA 2026-09-25, today 2026-09-22]: Processing; cancellation request opened (not a confirmed cancellation)."
+      }
+    ]
+  }
+]
